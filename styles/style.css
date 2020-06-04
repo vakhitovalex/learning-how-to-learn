@@ -49,6 +49,10 @@
   font-weight: normal;
 }
 
+.header__link {
+  text-decoration: none;
+}
+
 .header__main-illustration {
   position: absolute;
   bottom: 0;
