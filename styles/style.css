@@ -1,8 +1,3 @@
-/* anchor tags with no style applied */
-a, a:visited, a:hover, a:active {
-  text-decoration:none;
-}
-
 .page {
   min-width: 1100px;
   /* we don't know how to make mobile versions of websites yet, */
@@ -36,7 +31,7 @@ a, a:visited, a:hover, a:active {
 .header__title {
   display: flex;
   align-items: center;
-  width: 730px;
+  max-width: 730px;
   margin-left: 64px;
   line-height: 96px;
   font-size: 102px;
@@ -47,7 +42,7 @@ a, a:visited, a:hover, a:active {
   position: absolute;
   bottom: 30px;
   left: 64px;
-  width: 388px;
+  max-width: 388px;
   z-index: 1;
   line-height: 25px;
   font-size: 18px;
@@ -58,8 +53,8 @@ a, a:visited, a:hover, a:active {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 765px;
   height: 608px;
+  width: 765px;
 }
 
 /* here we have two examples of selectors in order to remind you how to set styles for elements */
@@ -125,14 +120,10 @@ a, a:visited, a:hover, a:active {
   display: flex;
   flex-direction: column;
 }
-.centered-text{
-  align-self: center;
-  text-align: center;
-}
 
 .section-title {
-  /* align-self: center;
-  text-align: center; */
+  align-self: center;
+  text-align: center;
   width: 60%;
   line-height:69px;
   font-size: 60px;
@@ -140,8 +131,8 @@ a, a:visited, a:hover, a:active {
 }
 
 .section-subtitle {
-  /* align-self: center;
-  text-align: center; */
+  align-self: center;
+  text-align: center;
   width: 60%;
   margin-top: 20px;
   line-height: 34px;
@@ -151,22 +142,17 @@ a, a:visited, a:hover, a:active {
 
 .table {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 1100px;
   margin: 0 auto 100px;
-}
-
- .table__row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 60px;
 }
 
 .table__cell {
   width: 250px;
   display: flex;
   flex-direction: column;
+  margin-top: 60px;
 }
 
 .table__heading {
@@ -185,7 +171,7 @@ a, a:visited, a:hover, a:active {
 .feynman {
   display: flex;
   flex-direction: column;
-  height: 790px;
+  min-height: 790px;
   background-color: #f2f2f2;
   background-image: url("../images/feynman.png");
   background-repeat: no-repeat;
@@ -195,15 +181,18 @@ a, a:visited, a:hover, a:active {
 }
 
 .feynman__title {
-  width: 775px;
+  max-width: 775px;
   margin-bottom: 70px;
   line-height: 1.15;
   font-size: 120px;
   font-weight: bold;
+  align-self: center;
+  text-align: center;
 }
 
-.feynman_text-normal
-{
+.feynman__subtitle {
+  align-self: center;
+  text-align: center;
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
@@ -213,7 +202,11 @@ a, a:visited, a:hover, a:active {
   position: absolute;
   bottom: 50%;
   right: 48px;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
   text-decoration:none;
+  color: #000;
 }
 
 .kaufman {
@@ -221,10 +214,8 @@ a, a:visited, a:hover, a:active {
   flex-direction: column;
   position: relative;
   overflow: hidden;
-}
-
-.theme-dark {
   background-color: #1f1f1f;
+  z-index: -1;
 }
 
 .section-title_theme_dark {
@@ -239,35 +230,32 @@ a, a:visited, a:hover, a:active {
 }
 
 .table_theme_dark {
-  display: flex;
-  flex-direction: column;
   width: 1100px;
-  margin: 0 auto 90px;
-  z-index: 1
-}
-
-.table__row_theme_dark {
-  /* border: 1px red solid; */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  margin-bottom: 90px;
+  z-index: 1;
 }
 
 /* including elements with key-value modifiers */
 .table__cell_theme_dark {
-  /* border: 1px red solid; */
   width: 200px;
   color: white;
-  margin-right: 0;
-  margin-top: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: space-between;
+  margin-top: 90px;
 }
+
+.table__heading_theme_dark {
+  color: white;
+}
+
+.table__text_theme_dark {
+  color: white;
+}
+
 .kaufman__triangle {
   width: 877px;
   height: 877px;
+  background-image: url(../images/kaufman-triangle.svg);
   position: absolute;
+  top: 0;
   right: -210px;
   z-index: 0;
 }
@@ -275,6 +263,7 @@ a, a:visited, a:hover, a:active {
 .footer {
   min-height: 350px;
   display: flex;
+  background-color: #1f1f1f;
 }
 
 .footer__columns {
@@ -284,10 +273,13 @@ a, a:visited, a:hover, a:active {
   margin: 60px auto 40px;
 }
 
-.footer__column_content-copyright {
+.footer__column {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.footer__column_content-copyright {
   flex-basis: 711px;
 }
 
@@ -307,8 +299,8 @@ a, a:visited, a:hover, a:active {
 }
 
 .footer__column_content-info {
-  display: flex;
   flex-direction: column;
+  justify-content: start;
 }
 
 .footer__column-heading {
@@ -319,20 +311,23 @@ a, a:visited, a:hover, a:active {
   font-weight: bold;
 }
 
-.footer__column-link {
-  display: flex;
-  align-items: center;
-  margin-bottom: 16px;
-  color: #f2f2f2;
+.footer__column-links {
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
+  text-decoration: none;
+  list-style-type:none;
+  color: white;
+}
 
+.footer__column-links:last-of-type {
+  margin-bottom: 16px;
 }
 
 .footer__column_content-social {
-  display: flex;
-  flex-direction: column;
+  justify-content: start;
+  color: #f2f2f2;
+  margin-bottom: 0px;
 }
 
 .footer__social-icon {
