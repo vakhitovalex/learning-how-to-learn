@@ -5,3 +5,4 @@ This project is built on pure HTML and CSS (no JS!) and utilizing BEM methodolog
 Plans for future:
 - Font Updates;
 - Verifying cross-browser compatibility;
+- TBD...
