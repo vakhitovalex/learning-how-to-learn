@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Learning how to learn</title>
-  <link rel="stylesheet" href="./styles/normalize.css">
-  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./vendor/normalize.css">
+  <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
   <div class="page">
@@ -76,8 +76,7 @@ frameborder="0" allowfullscreen class="video__iframe"></iframe>
           </li>
         </ul>
       </section>
-      <section class>
-        <section class="oakley">
+      <section class="oakley">
           <div class="two-columns">
             <h2 class="two-columns__brief">Barbara Oakley’s story.</h2>
             <div class="two-columns__main-text">
@@ -91,7 +90,12 @@ frameborder="0" allowfullscreen class="video__iframe"></iframe>
                 may get at first glance gives you a deeper, more comprehensive understanding of the subject matter.</p>
             </div>
           </div>
-        </section>
+      </section>
+      <section class="feynman">
+        <h2 class="feynman__title">The Feynman Technique</h2>
+        <p class="feynman__subtitle">Learn without forgetting.</p>
+        <a href="#" class="feynman__link">More →</a>
+        <!-- <img class="feynman__main-illustration" src="./images/feynman.png" alt="Feynman photo at the blue circle background"> -->
       </section>
       <section class="digits">
         <h2 class="section-title">Facts and figures</h2>
@@ -132,11 +136,21 @@ frameborder="0" allowfullscreen class="video__iframe"></iframe>
           </li>
         </ul>
       </section>
-      <section class="feynman">
-        <h2 class="feynman__title">The Feynman Technique</h2>
-        <p class="feynman__subtitle">Learn without forgetting.</p>
-        <a href="#" class="feynman__link">More →</a>
-        <!-- <img class="feynman__main-illustration" src="./images/feynman.png" alt="Feynman photo at the blue circle background"> -->
+      <section class="khan">
+        <div class="khan__container">
+          <p class="khan__author">Salman Khan</p>
+          <p class="khan__title">The One World Schoolhouse</p>
+          <p class="khan__quote">Sal Khan's passion and innovation is transforming learning for millions of
+            students worldwide. The One World Schoolhouse is a must-read for all
+            who are committed to improving education so students everywhere can
+            gain the skills and knowledge to be successful in school, careers and life.</p>
+          <p class="khan__quote-author">George Lucas</p>
+          <p class="khan__quote-author-subline">Filmmaker</p>
+          <div class="khan__book-container">
+            <img src="./images/khan-book.png" alt="A cover of the book The One World School House Education Reimagined" class="khan__book-pic">
+            <a href="https://www.amazon.com/dp/B00FOVTMU4/" class="khan__buy-link">Buy book →</a>
+          </div>
+        </div>
       </section>
       <section class="kaufman">
         <h2 class="section-title section-title_theme_dark">Ten principles of rapid skill acquisition</h2>
@@ -183,7 +197,17 @@ frameborder="0" allowfullscreen class="video__iframe"></iframe>
               <p class="table__text table__text_theme_dark">Emphasize quantity and speed.</p>
             </li>
         </ul>
-        <div class="kaufman__triangle"></div>
+        <div class="kaufman__triangle rotation"></div>
+      </section>
+      <section class="resources">
+        <h2 class="section-title">Useful resources</h2>
+        <p class="section-subtitle">Further materials on learning techniques and hacks.</p>
+        <div class="resources__logo-zone">
+          <img src="./images/logo/resources-tedED.png" alt="Logo of TedEd" class="resources__logo">
+          <img src="./images/logo/resources-Medium.png" alt="Logo of Medium" class="resources__logo">
+          <img src="./images/logo/resources-dezeen.png" alt="Logo of de zeen" class="resources__logo">
+          <img src="./images/logo/resources-goodreads.png" alt="Logo of goodreads" class="resources__logo">
+        </div>
       </section>
     </main>
     <footer class="footer">

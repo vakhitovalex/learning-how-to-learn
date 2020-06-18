@@ -1,0 +1,7 @@
+.footer__column-links {
+  list-style-type:none;
+}
+
+.footer__column-links:last-of-type {
+  margin-bottom: 16px;
+}
